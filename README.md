@@ -122,11 +122,11 @@ Unstructured empowers you to break down text documents into smaller, more manage
 
 **OpenFGA: Securing Access to Extracted Data**
 
-OpenFGA takes the extracted data and information to the next level by enforcing access control. You define policies that govern user permissions based on specific conditions. When a user tries to access a document or its extracted data, OpenFGA evaluates the corresponding user and document against these policies, granting or denying access.
+You define policies that govern user permissions based on specific conditions. When a user tries to access a document or its extracted data, OpenFGA evaluates the corresponding user and document against these policies, granting or denying access.
 
 **MongoDB Atlas Vector Search: Finding Similar Documents Efficiently**
 
-Here's where MongoDB Atlas Vector Search shines. Imagine you're searching for a specific concept within a document collection. Keyword-based searches might miss relevant documents that don't contain the exact keywords. Vector search, however, analyzes the vector representations of document content, allowing you to find semantically similar documents, even if they use different wording.
+Imagine you're searching for a specific concept within a document collection. Keyword-based searches might miss relevant documents that don't contain the exact keywords. Vector search, however, analyzes the vector representations of document content, allowing you to find semantically similar documents, even if they use different wording.
 
 **The Power of Combining these Tools**
 
