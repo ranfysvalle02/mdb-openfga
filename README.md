@@ -196,7 +196,7 @@ The `check_authorization` function plays a vital role in the mdb-openfga applica
 python3 demo.py
 ```
 
-### Full Source Code
+#### Full Source Code
 ```python
 import asyncio
 import requests
