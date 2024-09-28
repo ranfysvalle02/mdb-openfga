@@ -196,6 +196,21 @@ The `check_authorization` function plays a vital role in the mdb-openfga applica
 python3 demo.py
 ```
 
+#### Sample Output
+
+```
+Starting FGA setup...
+FGA setup response: {'code': 'write_failed_due_to_invalid_input', 'message': "cannot write a tuple which already exists: user: 'user:demo_user', relation: 'viewer', object: 'doc:demo.pdf': invalid write input"}
+Clearing the db first...
+Database cleared.
+Starting PDF document partitioning...
+PDF partitioning and database insertion completed successfully.
+Waiting for index to be updated. This may take a few seconds...
+Starting search tool...
+Access Granted: User 'demo_user' has permission to read document 'demo.pdf'.
+Access Denied: User 'demo_user-denyme' does not have permission to read document 'demo.pdf'.
+```
+
 #### Full Source Code
 ```python
 import asyncio
