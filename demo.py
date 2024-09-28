@@ -5,7 +5,7 @@ import pymongo
 from unstructured.partition.auto import partition
 from openai import AzureOpenAI
 
-class DocumentProcessor:
+class FGA_MDB_DEMO:
     def __init__(self, azure_endpoint, api_version, api_key, mongo_uri, fga_api_url, fga_store_id, fga_api_token, authorization_model_id, db_name, collection_name):
         self.az_client = AzureOpenAI(azure_endpoint=azure_endpoint, api_version=api_version, api_key=api_key)
         self.mongo_client = pymongo.MongoClient(mongo_uri)
@@ -108,7 +108,7 @@ class DocumentProcessor:
         print("Process completed successfully.")
 
 if __name__ == "__main__":
-    dp = DocumentProcessor(
+    fga_mdb_demo = FGA_MDB_DEMO(
         azure_endpoint="",
         api_version="2024-04-01-preview",
         api_key="",
@@ -120,4 +120,4 @@ if __name__ == "__main__":
         db_name="demo",
         collection_name="mdb_fga"
     )
-    asyncio.run(dp.main("demo_user", "demo.pdf"))
+    asyncio.run(fga_mdb_demo.main("demo_user", "demo.pdf"))
