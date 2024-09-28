@@ -1,5 +1,7 @@
 ## mdb-openfga: OpenFGA + MongoDB
 
+![openfga-demo.png](openfga-demo.png)
+
 **MongoDB Atlas Vector Search** enables efficient similarity searches based on vector representations. This is particularly beneficial when working with unstructured data like text, images, or audio, where traditional keyword-based searches might fall short.
 
 **Key Advantages:**
@@ -7,13 +9,6 @@
 * **Semantic Understanding:** Vector representations capture the underlying meaning and context of data, allowing for more accurate and relevant search results.
 * **Efficient Retrieval:** Vector search algorithms are highly optimized for finding similar items quickly, even in large datasets.
 * **Scalability:** MongoDB Atlas Vector Search can handle massive datasets and scale seamlessly as your application grows.
-
-** Some Use Cases:**
-
-* **Document Search:** Find documents that are semantically similar to a given query, even if they don't contain exact keywords.
-* **Recommendation Systems:** Suggest items or content that are likely to be of interest to a user based on their preferences or past behavior.
-* **Image and Video Search:** Find visually similar images or videos within a large collection.
-* **Anomaly Detection:** Identify outliers or anomalies in data by comparing them to similar patterns.
 
 **Integration with OpenFGA:**
 
@@ -85,7 +80,7 @@ This section guides you through creating a vector search index for efficient sim
 1. Connect to the local Atlas cluster using `mongosh`:
 
    ```bash
-   mongosh "mongodb://localhost/?directConnection=true"
+   mongosh "mongodb://localhost/demo?directConnection=true"
    ```
 
 2. Switch to the `demo` database (replace with your actual database name if needed):
@@ -317,7 +312,7 @@ if __name__ == "__main__":
         azure_endpoint="",
         api_version="2024-04-01-preview",
         api_key="",
-        mongo_uri="mongodb://localhost:27017?directConnection=true",
+        mongo_uri="mongodb://localhost:27017/demo?directConnection=true",
         fga_api_url='http://localhost:8080',
         fga_store_id='01J8VP1HYCHN459VT76DQG0W2R',
         fga_api_token='',
